@@ -5,6 +5,10 @@ resource "aws_route_table" "public_route" {
         cidr_block = "0.0.0.0/0"
         gateway_id = aws_internet_gateway.this.id
     }
+
+    tags = {
+      Name = "sample Public Route"
+    }
 }
 
 resource "aws_route_table" "private_route" {
@@ -13,6 +17,10 @@ resource "aws_route_table" "private_route" {
     route {
         cidr_block = "0.0.0.0/0"
         gateway_id = aws_nat_gateway.this.id
+    }
+
+    tags = {
+      Name = "sample Private Route"
     }
 }
 
