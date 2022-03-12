@@ -11,7 +11,7 @@ After=multi-user.target
 [Service]
 Type=simple
 Restart=always
-ExecStart=/usr/bin/python3 /opt/app/hello.py
+ExecStart=/usr/bin/python3 /opt/app/sample-python-app/hello.py
 [Install]
 WantedBy=multi-user.target
 EOF
