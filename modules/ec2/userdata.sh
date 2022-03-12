@@ -18,11 +18,12 @@ EOF
 
 mkdir -p /opt/app && cd /opt/app
 git clone https://github.com/lucas-lsievert/sample-python-app.git
-pip install -r requirements.txt
+cd sample-python-app
+pip3 install -r requirements.txt
 
 systemctl daemon-reload
-systemctl enable app.service
-systemctl start app.service
+systemctl enable app
+systemctl start app
 
 
 
