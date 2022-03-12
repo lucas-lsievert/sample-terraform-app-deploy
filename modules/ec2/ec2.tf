@@ -10,6 +10,8 @@ data "aws_ami" "amazon-linux-2" {
     name   = "name"
     values = ["amzn2-ami-hvm-*-x86_64-ebs"]
   }
+
+  owners = ["amazon"]
 }
 
 resource "aws_instance" "this" {
