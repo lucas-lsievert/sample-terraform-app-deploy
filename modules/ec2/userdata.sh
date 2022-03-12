@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 systemctl daemon-reload
 systemctl enable app.service
-systemctl start test.service
+systemctl start app.service
 
 
 
