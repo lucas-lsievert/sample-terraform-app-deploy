@@ -8,7 +8,7 @@ output "public_subnet_id" {
     value       = aws_subnet.public_subnet.id
 }
 
-output "vpc_id" {
+output "generated_vpc_id" {
     description = "ID of the created VPC"
     value       = aws_vpc.this.id
 }
