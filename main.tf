@@ -20,3 +20,9 @@ module "vpc" {
     public_cidr_block  = var.public_cidr_block
     private_cidr_block = var.private_cidr_block
 }
+
+module "ec2" {
+    source    = "./modules/ec2"
+
+    subnet_id = module.vpc.private_subnet_id
+}
