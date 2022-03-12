@@ -24,7 +24,7 @@ module "vpc" {
 module "ec2" {
     source    = "./modules/ec2"
 
-    subnet_id     = module.vpc.private_subnet_id
+    subnet_id     = module.vpc.public_subnet_id
     instance_type = var.instance_type
     vpc_id        = module.vpc.generated_vpc_id
 }
