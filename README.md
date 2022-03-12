@@ -7,10 +7,6 @@ This sample terraform project create a basic VPC infrastructure using AWS cloud 
 2. Install Git
 3. AWS credentials to allow terraform create resources (Current Supported Way: Access and Secret Key). User Policy example is available inside 'sample-user-permission.json' file.
 
-## Terraform Structure
-
-1. Module VPC - This module is responsible to create all resources related to AWS VPC(VPC, Subnets, Route Table, Gateways). The CIDR range assign to the vpc and subnets could be changed using the proper variables. 
-2. Module Ec2 - This module is responsible to create the application ec2, security group and configure the userdata used to configure the instance with the sample application.
 
 ## How to Use
 
