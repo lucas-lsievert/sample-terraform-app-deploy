@@ -15,4 +15,8 @@ provider "aws" {
 
 module "vpc" {
     source = "modules/vpc/"
+
+    vpc_cidr_block     = var.vpc_cidr_block
+    public_cidr_block  = var.public_cidr_block
+    private_cidr_block = var.private_cidr_block
 }
