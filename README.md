@@ -16,10 +16,12 @@ This sample terraform project create a basic VPC infrastructure using AWS cloud 
 
 1. Clone the IAC github repository - https://github.com/lucas-lsievert/sample-terraform-app-deploy.git
 2. Run terraform init to setup the terraform backend - `terraform init`
-3. Apply terraform passing secret and access key as variables - `terraform apply -var 'access_key=****' -var 'secret_key=****'`
+3. Apply terraform passing secret and access key as variables - `terraform apply -auto-approve -var 'access_key=****' -var 'secret_key=****'`
    Replace the variable values with your own credentials
 4. Run terraform output to grab the public ip from the app instance = `terraform output app_instance_ip`
-5. Use the public ip in your browser to see the message from the webapp hosted insede the ec2 instance
+5. Wait about four or five minutes after terraform ends the execution. This script uses the userdata from ec2 to configure the instance, it take some time.
+6. Use the public ip in your browser to see the message from the webapp hosted inside the ec2 instance.
+7. If you want to destroy the infrastructure, simple use terraform destroy command - `terraform destroy -auto-approve -var 'access_key=****' -var 'secret_key=****'`
 
 ## Terraform Defaults
 
