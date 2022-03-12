@@ -19,7 +19,8 @@ resource "aws_instance" "this" {
     instance_type               = var.instance_type
     subnet_id                   = var.subnet_id
     vpc_security_group_ids      = [aws_security_group.this.id]
-    associate_public_ip_address = true 
+    associate_public_ip_address = true
+    user_data = filebase64("userdata.sh")
 
     tags = {
         Name = "Sample Application"
