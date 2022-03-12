@@ -21,6 +21,7 @@ This sample terraform project create a basic VPC infrastructure using AWS cloud 
 4. Run terraform output to grab the public ip from the app instance = `terraform output app_instance_ip`
 5. Wait about four or five minutes after terraform ends the execution. This script uses the userdata from ec2 to configure the instance, it take some time.
 6. Use the public ip in your browser to see the message from the webapp hosted inside the ec2 instance.
+7. If you want to destroy the infrastructure, simple use terraform destroy command - `terraform destroy -auto-approve -var 'access_key=****' -var 'secret_key=****'`
 
 ## Terraform Defaults
 
